@@ -1,0 +1,157 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+
+
+  scroll-behavior: smooth;
+  /* background: #6600cc; */
+  /* background:#350040; */
+
+  background-image: url('../public/bgtabby.png');
+  background-attachment: fixed;
+  background-size: cover;
+  color: #F2F2F2;
+  /* color:#272727; */
+  /* min-height : 300vh; */
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
+  overflow-x: hidden;
+  
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 20px 20px 20px 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* ================================================================== */
+
+::-moz-selection { /* Code for Firefox */
+  color: #121212;
+  background: #F2F2F2;
+}
+
+::selection {
+  color: #121212;
+  background: #F2F2F2;
+}
+
+.fadedown{
+  transform: translateY(-250px);
+
+  opacity: 0;
+  
+  animation: slidein 1.5s ease-in-out 1.5s forwards, pulse 3s ease-in-out 3s infinite forwards;
+  /* animation: pulse 3s ease-in-out 3s infinite forwards; */
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.0625;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slidein {
+  from {    
+  }
+
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.yolo{
+
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-image: url("../public/about.jpg");
+  min-height: 300vh;
+
+}
+/* ========================================================= */
+
+.overtext{
+  position: relative;
+  bottom:75px;
+  right: 80px;
+  font-size: 5rem;
+  font-weight: 800;
+
+  transition: all 500ms ease-in-out;
+ 
+}
+
+@media(max-width:425px) {
+  .overtext{
+    /* position : static; */
+    right:0px;
+    bottom:0px;
+    font-size: 3rem;
+  }
+}
+
+.imgcomp:hover .overtext{
+  transform: scale(1.2);
+
+  bottom:50px;
+  /* left:600px; */
+  right: 0px;
+
+}
+
+.imgcomp:hover img{
+
+  transform: scale(0.9);
+  /* filter: contrast(110%); */
+  /* filter: brightness(110%); */
+
+}
+
+.imgcomp>img{
+  transition: all 500ms ease-in-out;
+
+}
+
+/* .fuckthisshit{
+  background-image: url('/theme2.png');
+} */
